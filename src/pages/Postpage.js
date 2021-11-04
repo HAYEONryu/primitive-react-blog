@@ -1,6 +1,12 @@
-import React from "react";
+import React from 'react';
+import Header from '../components/common/Header';
 
-const Postpage = () => {
-    return <div>Postpage</div>;
+
+const PostPage = () => {
+  return (<>
+    <Header/>
+    <div>포스트 읽기</div>
+  </>);
 };
-export default Postpage;
+
+export default PostPage;

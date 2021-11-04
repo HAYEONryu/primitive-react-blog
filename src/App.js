@@ -1,20 +1,18 @@
 import React from 'react';
-import {Route} from 'react-router-dom';
-import Postpage from './pages/Postpage';
-import Write from './pages/Write';
-import Register from './pages/Register';
-import LoginPage from './pages/Login';
-import PostList from './pages/PostList';
+import { Route } from 'react-router-dom';
+import PostListPage from './pages/PostListPage';
+import LoginPage from './pages/LoginPage';
+import RegisterPage from './pages/RegisterPage';
+import PostPage from './pages/PostPage';
 
-const App = ()=>{
-  return(
+const App = () => {
+  return (
     <>
-      <Route component = {PostList} path={["/@:username","/"]} exact />
-      <Route component = {LoginPage} path="/login" />
-      <Route component = {Register} path="/register" />
-      <Route component = {Write} path="/write" />
-      <Route component = {Postpage} path="/@:username/:postId" />
+      <Route component={PostListPage} path={['/@:username', '/']} exact />
+      <Route component={LoginPage} path="/login" />
+      <Route component={RegisterPage} path="/register" />
+      <Route component={PostPage} path="/@:username/:postId" />
     </>
-    );
+  );
 };
 export default App;
